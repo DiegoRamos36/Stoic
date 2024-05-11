@@ -32,10 +32,11 @@ background: #3D3D66;
 z-index: 2;
 transition: all 1s ease-out;
 visibility: hidden;
+
 }
 
 .menu.open {
-
+  overflow: hidden;
   transform: translateY(0px);
   visibility: initial;
   top: 0;
@@ -96,6 +97,11 @@ position: absolute;
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
+  overflow: hidden;
+}
+
+.open-menu.open {
+  overflow: hidden;
 }
 
 .open-menu.open .bar:nth-child(1) {
@@ -103,6 +109,8 @@ position: absolute;
 transform: rotate(45deg);
 width: 28px;
 transform-origin: top left;
+
+
 }
 .open-menu.open .bar:nth-child(2) {
   transition: all .5s ease-in;
