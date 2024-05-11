@@ -1,3 +1,7 @@
+.slide {
+  overflow: initial;
+}
+
 .slide-item {
 display: flex;
 justify-content: space-around;

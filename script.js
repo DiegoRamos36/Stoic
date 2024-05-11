@@ -1,9 +1,15 @@
-function scrollTitle() {
-  let triggerHeightLandingPage = 0;
+function scrollEffect(pos, element, active) {
+  const scrollTop = this.document.documentElement.scrollTop;
+  if (scrollTop >= pos) {
+    this.document.querySelector('.' + element).classList.add(active);
+  } else {
+    this.document.querySelector('.' + element).classList.remove(active);
+  }
+}
 
-  let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
-
-  if (scrollTop >= triggerHeightLandingPage) {
+function scrollX(pos) {
+  const scrollTop = this.document.documentElement.scrollTop;
+  if (scrollTop >= pos) {
     this.document.querySelector(
       '.landing-page h1:nth-child(1)',
     ).style.transform = 'translateX(' + scrollTop + 'px)';
@@ -17,6 +23,18 @@ function scrollTitle() {
     this.document.querySelector(
       '.landing-page h1:nth-child(1)',
     ).style.transform = 'translateX(0px)';
+  }
+}
+
+function scrollTitle() {
+  let triggerHeightLandingPage = 0;
+  let triggerTitle = 300;
+  let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
+
+  if (scrollTop >= triggerTitle) {
+    this.document.querySelector('.title').classList.add('change');
+  } else {
+    this.document.querySelector('.title').classList.remove('change');
   }
 }
 
@@ -67,10 +85,19 @@ function scrollHistory() {
   }
 }
 
-window.addEventListener('scroll', scrollTitle);
-window.addEventListener('scroll', scrollWork);
+window.addEventListener('scroll', function () {
+  scrollEffect(300, 'title', 'change');
+});
+window.addEventListener('scroll', function () {
+  scrollEffect(1100, 'our-work', 'showWork');
+});
 window.addEventListener('scroll', scrollOpacity);
-window.addEventListener('scroll', scrollFooter);
+window.addEventListener('scroll', function () {
+  scrollEffect(2800, 'footer', 'open');
+});
+window.addEventListener('scroll', function () {
+  scrollX(0);
+});
 
 document.querySelector('.open-menu')?.addEventListener('click', function () {
   document.querySelector('.menu')?.classList.toggle('open');

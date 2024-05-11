@@ -6,6 +6,7 @@
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: visible;
+  font-family: Kode Mono;
 }
 
 
@@ -51,6 +52,7 @@ body.loaded {
 .title {
   font-size: 48px;
 }
+
 
 .btn-content {
   background: none;
