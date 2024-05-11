@@ -14,6 +14,9 @@
     align-items: center;
     justify-content: center;
   }
+  .load-circle {
+    margin: 0;
+  }
 }
 
 @media (max-width: 600px) {
