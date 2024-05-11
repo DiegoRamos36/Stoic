@@ -1,0 +1,26 @@
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.history {
+  display: flex;
+}
+.history img {
+  max-width: 600px;
+  border-radius: 5px;
+}
+.history-text  {
+  margin-left: 100px;
+  max-width: 600px;
+  font-size: 32px;
+  line-height: 1.4;
+
+}
+

@@ -1,0 +1,16 @@
+.book li {
+  border-top: 1px solid #fff;
+  padding: 20px;
+  font-size: 36px;
+  transition: all .3s ease-in;
+}
+
+.book li:nth-child(1) {
+  border: none;
+}
+
+.book li:hover {
+  background: #eee;
+  color: #0A0B09;
+}
+

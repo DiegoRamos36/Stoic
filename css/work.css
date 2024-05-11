@@ -1,0 +1,25 @@
+.our-work {
+margin: 30px auto;
+height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+overflow: hidden;
+max-width: 0;
+opacity: 0;
+transition: max-width 2s ease-out, opacity 2s ease-out;
+white-space: nowrap;
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.our-work h1 {
+  font-size: 124px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.our-work.open {
+  max-width: 100%;
+  opacity: 1;
+}
