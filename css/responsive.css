@@ -15,7 +15,10 @@
     justify-content: center;
   }
   .load-circle {
-    margin: 0;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    
   }
 }
 
@@ -31,4 +34,9 @@
     font-size: 64px;
     margin-bottom: 20px;
   }
+  .menu {
+    margin: 0;
+    padding: 0;
+  }
+  
 }
