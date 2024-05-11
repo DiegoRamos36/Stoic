@@ -7,11 +7,13 @@ bottom: -1000px;
 background: #3D3D66;
 z-index: 2;
 transition: all 1s ease-out;
+visibility: hidden;
 }
 
 .footer.open {
   transform: translateY(0px);
   bottom: 0;
+  visibility: initial;
 }
 
 .footer h1 {

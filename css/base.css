@@ -4,6 +4,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 
@@ -24,7 +26,7 @@ body {
   background: #0A0B09;
   color: white;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+
 }
 
 body.loaded {

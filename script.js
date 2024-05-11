@@ -42,14 +42,14 @@ function scrollWork() {
   let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
   let triggerHeightWork = 1100;
   if (scrollTop >= triggerHeightWork) {
-    this.document.querySelector('.our-work').classList.add('open');
+    this.document.querySelector('.our-work').classList.add('showWork');
   } else {
-    this.document.querySelector('.our-work').classList.remove('open');
+    this.document.querySelector('.our-work').classList.remove('showWork');
   }
 }
 function scrollFooter() {
   let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
-  let triggerHeigthFooter = 2400;
+  let triggerHeigthFooter = 2500;
   if (scrollTop >= triggerHeigthFooter) {
     this.document.querySelector('.footer').classList.add('open');
   } else {
@@ -112,8 +112,8 @@ team.forEach(function (member) {
   image.src = member.img.src;
   image.alt = member.img.alt;
 
-  const nameH1 = document.createElement('h3');
-  nameH1.textContent = member.name;
+  const nameH3 = document.createElement('h3');
+  nameH3.textContent = member.name;
 
   const subtitle = document.createElement('p');
   subtitle.textContent = member.subtitle;
@@ -122,7 +122,7 @@ team.forEach(function (member) {
 
   listItem.classList.add('slide-item');
   subtitle.classList.add('subtitle');
-  subtitleDiv.appendChild(nameH1);
+  subtitleDiv.appendChild(nameH3);
   subtitleDiv.appendChild(subtitle);
   listItem.appendChild(image);
   listItem.appendChild(subtitleDiv);

@@ -17,6 +17,7 @@
   text-align: center;
   font-size: 48px;
   line-height: 1;
+  overflow: hidden;
   font-family: IBM Plex Mono, monospace;
   text-transform: uppercase;
   position: relative;
