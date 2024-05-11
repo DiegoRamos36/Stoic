@@ -24,13 +24,10 @@ function scrollOpacity() {
   const scrollTop = window.scrollY;
   const maxScroll = 600;
 
-  // Calcular a opacidade baseada no scrollTop
   const opacity = 1 - scrollTop / maxScroll;
 
-  // Limitar a opacidade entre 0 e 1
   const clampedOpacity = Math.min(Math.max(opacity, 0), 1);
 
-  // Aplicar a opacidade ao elemento
   document.querySelector('.landing-page h1:nth-child(1)').style.opacity =
     clampedOpacity;
   document.querySelector('.landing-page h1:nth-child(2)').style.opacity =
@@ -50,6 +47,15 @@ function scrollWork() {
     this.document.querySelector('.our-work').classList.remove('open');
   }
 }
+function scrollFooter() {
+  let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
+  let triggerHeigthFooter = 2400;
+  if (scrollTop >= triggerHeigthFooter) {
+    this.document.querySelector('.footer').classList.add('open');
+  } else {
+    this.document.querySelector('.footer').classList.remove('open');
+  }
+}
 
 function scrollHistory() {
   let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
@@ -64,6 +70,7 @@ function scrollHistory() {
 window.addEventListener('scroll', scrollTitle);
 window.addEventListener('scroll', scrollWork);
 window.addEventListener('scroll', scrollOpacity);
+window.addEventListener('scroll', scrollFooter);
 
 document.querySelector('.open-menu')?.addEventListener('click', function () {
   document.querySelector('.menu')?.classList.toggle('open');
