@@ -34,6 +34,18 @@ body.loaded {
   opacity: 1;
 }
 
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #3D3D66;    
+ border-radius: 2px;
+}
+
+
 .container {
   max-width: 1400px;
   margin: 30px auto;
