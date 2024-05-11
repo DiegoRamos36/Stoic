@@ -9,7 +9,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 top: 20px;
-z-index: 3;
+z-index: 5;
 }
 
 .header .title {
@@ -29,7 +29,7 @@ right: 0;
 height: 100%;
 top: -1000px;
 background: #3D3D66;
-z-index: 2;
+z-index: 4;
 transition: all 1s ease-out;
 visibility: hidden;
 

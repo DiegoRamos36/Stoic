@@ -49,7 +49,7 @@ function scrollWork() {
 }
 function scrollFooter() {
   let scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
-  let triggerHeigthFooter = 2500;
+  let triggerHeigthFooter = 2800;
   if (scrollTop >= triggerHeigthFooter) {
     this.document.querySelector('.footer').classList.add('open');
   } else {
